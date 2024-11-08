@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessTheColor</title>
+    <style>
+         body {
+            background-color: #cbc2c2;
+            color: #b10000;
+            text-align: center;
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+         h1 {
+            background-color: #000000;
+            color: rgb(0, 166, 221);
+            margin: 0;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+         #colorDisplay {
+            font-size: 24px;
+        }
+
+         #stripe {
+            background-color: rgba(9, 1, 1, 0.153);
+            padding: 10px;
+        }
+
+         button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+         .selected {
+            background-color: rgb(1, 170, 255);
+            color: white;
+        }
+
+         #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+         .square {
+            width: 30%;
+            background-color: purple;
+            padding-bottom: 30%;
+            margin: 1.66%;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+         #message {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Great <span id="colorDisplay">RGB(255, 0, 0)</span> Guessing Game</h1>
+    <div id="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button class="mode selected">Easy</button>
+        <button class="mode">Hard</button>
+    </div>
+    <div id="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+    <script src="GuessTheColor.js"></script>
+</body>
+</html>

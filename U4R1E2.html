@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de movimiento del ratón</title>
+    <style>
+        #posicion {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+         function mostrarPosicion(event) {
+             var x = event.clientX;
+            var y = event.clientY;
+             document.getElementById("posicion").innerText = "Posición del ratón: X = " + x + ", Y = " + y;
+        }
+
+         window.onload = function() {
+            document.addEventListener("mousemove", mostrarPosicion);
+        };
+    </script>
+</head>
+<body>
+    <h1>Captura del movimiento del ratón</h1>
+    <p>Mueve el ratón sobre la página para ver las coordenadas.</p>
+     <div id="posicion">Posición del ratón: X = 0, Y = 0</div>
+</body>
+</html>
